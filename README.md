@@ -5,9 +5,9 @@ Our paper: Deep learning based phase retrieval with complex beam shapes for beam
 
 Journal: Optics Express of OPTICA, USA.
 
-DOI:
+DOI: https://doi.org/10.1364/OE.547138
 
-Citation:
+Citation: Shengyuan Yan, Richard Off, Anil Yayak, Katrin Wudy, Anoush Aghajani-Talesh, Markus Birg, Jonas Grünewald, Mike Holenderski, and Nirvana Meratnia. 
 
 
 Please go to different folders for different experiments and different functionalities of our paper. There is respective detailed readme file instructions on how to use the scripts in each folder.
