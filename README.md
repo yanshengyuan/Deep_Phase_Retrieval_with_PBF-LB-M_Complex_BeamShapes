@@ -7,7 +7,7 @@ Journal: Optics Express of OPTICA, USA.
 
 DOI: https://doi.org/10.1364/OE.547138
 
-Citation: Shengyuan Yan, Richard Off, Anil Yayak, Katrin Wudy, Anoush Aghajani-Talesh, Markus Birg, Jonas Grünewald, Mike Holenderski, and Nirvana Meratnia. 
+Citation: S. Yan, R. Off, A. Yayak, K. Wudy, A. Aghajani-Talesh, M. Birg, J. Grünewald, M. Holenderski, and N. Meratnia, "Deep learning based phase retrieval with complex beam shapes for beam shape correction," Opt. Express  33, 10806-10834 (2025). 
 
 
 Please go to different folders for different experiments and different functionalities of our paper. There is respective detailed readme file instructions on how to use the scripts in each folder.
