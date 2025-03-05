@@ -52,9 +52,9 @@ Reproduce the training and testing dataset generation via the simulation of the 
 
 5, To start the simulations, run commands:
 
-                                        python3 train.py   to simulate the training set
+python3 train.py   to simulate the training set
 
-                                        python3 test.py   to simulate the test set
+python3 test.py   to simulate the test set
 
 6, The simulated intensity images of the distorted beam shapes will be in the folders 'Output_Data/' for the training set and 'Val_Data/' for the test set.
 
@@ -119,7 +119,9 @@ Training of the models:
 
 1, Specify in the configs_train.py: The path to your phase retrieval training data, DOI of the compared method, architecture name of the employed model, model scale, intended run name of MLFlow project and the experiment name in it, number of epochs, number of training samples, batch size, selection of input caustic planes by focal distance, initial learning rate, and step size of the learning rate decay strategy. Each domain in the configs_train.py script is mandatory!
 
-2, Training command: python3 train.py
+2, Training command:
+
+python3 train.py
 
 3, Pretrained weights (trained model): Updated and stored in the run ID folder in the root folder 'mlruns/'. E.g., "mlruns/189416205877355165/002cb96cd03d41439a8196d63f4c2bf2/artifacts/model/data/model.pth"
 
@@ -130,9 +132,13 @@ Testing of the models:
 
 1, Specify in the configs_test.py: The path to your testing data, the path to the trained model as indicated in the bullet point above, batch size, and selection of input caustic planes by focal distance. Each domain in the configs_test.py script is mandatory!
 
-2, Testing command: python3 test.py
+2, Testing command:
 
-   or the command to test all existing models in the 'mlruns/' folder: python3 test_all.py
+python3 test.py
+
+or the command to test all existing models in the 'mlruns/' folder:
+
+python3 test_all.py
 
 3, The predicted Zernike Coefficients will be stored in the 'predictions/' folder in numpy array files.
 
@@ -180,26 +186,30 @@ Reproduce the numbers reported in the tables Tab. 1. and Tab. 2. of the paper:
 
 6, There is a 'gt.npy' file that contains the groundtruth Zernike Coefficients for all 3000 testing samples in the path "../chair_testset/". They are the groundtruth needed to compute the MAE(Z), wavefront error, and correction error.
 
-7, If all files mentioned above exist in the indicated path then run command: nohup python3 resnet.py  >resnet.txt 2>&1 &
+7, If all files mentioned above exist in the indicated path then run command:
+
+nohup python3 resnet.py  >resnet.txt 2>&1 &
 
 8, Running 'resnet.py' will generate:
 
-                                     the resnet_Metrics.npy file that contains 3000 records of all four computed metrics
+the resnet_Metrics.npy file that contains 3000 records of all four computed metrics
 
-                                     the resnetScatter_Matrix.png that plots the correlation between every two metrics
+the resnetScatter_Matrix.png that plots the correlation between every two metrics
 
-                                     the visualized reconstructed intensity images in "ReconsErr/"
+the visualized reconstructed intensity images in "ReconsErr/"
 
-                                     the visualized corrected beam shapes in "CorrErr/"
+the visualized corrected beam shapes in "CorrErr/"
 
-                                     the resnet.txt log file that reports the values of the five (one extra as the wrapped-phase wavefront error) computed metrics and the average values of them in the end. The numbers at the end of this log file are the average performance numbers reported in the paper.
+the resnet.txt log file that reports the values of the five (one extra as the wrapped-phase wavefront error) computed metrics and the average values of them in the end. The numbers at the end of this log file are the average performance numbers reported in the paper.
 
 
 
 
 Reproduce the visualized examples in the Fig. 9. Worst cases visualization of aberration detection and Fig. 13. Worst cases visualization of beam shapes correction:
 
-1, Run the script 'beamshape_name/PhaseMask_WorstVis.py': python3 PhaseMask_WorstVis.py
+1, Run the script 'beamshape_name/PhaseMask_WorstVis.py':
+
+python3 PhaseMask_WorstVis.py
 
 2, The visualized worst examples will be in the path "beamshape_name/PhaseMaps"
 
@@ -212,7 +222,9 @@ Reproduce the visualized examples in the Fig. 10. Average cases visualization of
 
 1, For each beam shape, enter the corresponding folder 'beamshape_name/'. There will be a script PhaseMask_SelectedVis.py in it.
 
-2, Run this script: python3 PhaseMask_SelectedVis.py
+2, Run this script:
+
+python3 PhaseMask_SelectedVis.py
 
 3, The visualized average representative examples will be in the path "beamshape_name/PhaseMaps"
 
@@ -263,7 +275,9 @@ codes......
 
 3, Each segment is dedicated to plotting one of the figures in the paper. To reproduce a figure, use single-line commenting character # to disable the multi-line commenting characters ''' at the beginning and the end of the segment to activate the function of this segment.
 
-4, Run the script: python3 draw_dotchart.py
+4, Run the script:
+
+python3 draw_dotchart.py
 
 5, Remove the character # you added just now in the script to disable the function of the segment again. This step is necessary otherwise the plotting programs will intervene each other and yield chaotic results. The 3D bar chart plotting program is highly complicated and its presence in this script makes this script has to work this way one plotting at a time for each figure.
 
